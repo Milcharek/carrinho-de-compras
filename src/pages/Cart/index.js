@@ -61,7 +61,7 @@ export const Cart = () => {
         draggable: true,
         progress: undefined,
         });
-      setTotal(0)
+      setItems([])
     }
   
     return (
