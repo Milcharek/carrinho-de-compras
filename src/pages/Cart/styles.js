@@ -14,14 +14,14 @@ export const Container = styled.div`
     background: none;
     border: 0;
     padding: 20px;
-    font-size: 50px;
+    font-size: 3em;
     color: #3b74ed;
   }
   h1 {
     display: flex;
     justify-content: center;
     padding: 20px;
-    font-size: 2.8em;
+    font-size: 2.4em;
     font-weight: bold;
   }
 `;
@@ -29,25 +29,28 @@ export const Container = styled.div`
 export const Area = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 export const Product = styled.div`
   display: flex;
   width: 100%;
-  padding: 10px 30px;
+  padding: 5px 30px;
 `;
 
 export const ProductInfo = styled.div`
-  display: block;
-  padding: 20px 30px;
+  padding: 20px 0px 0px 30px;
+  h2 {
+    font-size: 1.7em;
+  }
   p {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #beb8b2;
+    margin-bottom: -2px;
   }
   span {
-      font-size: 24px;
+    font-size: 1.7em;
   }
 `;
 
@@ -65,7 +68,7 @@ export const Total = styled.div`
   height: 50px;
   margin: 25px 0px 75px;   
   padding: 20px 30px;
-  font-size: 1.8em;
+  font-size: 1.7em;
   p {
     font-size: 0.3em;
     font-weight: normal;
@@ -83,13 +86,13 @@ export const FreeShipping = styled.div`
   background-color: #c8ffac;
   color: #247a19;
   margin: 50px 50px;
-  padding: 25px;
+  padding: 15px 25px;
   border-radius: 50px;
 `;
 
 export const SubmitButton = styled.div`
   button {
-    font-size: 2.8em;
+    font-size: 2.4em;
     padding: 40px;
     margin: 40px 40px 20px 0px;
     background-color: #3b74ed;

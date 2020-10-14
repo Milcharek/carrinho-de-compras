@@ -30,7 +30,7 @@ export const Cart = () => {
           ...item,
           name: item.name.toLowerCase().replace(/(?:^|\s)(?!da|de|do|e)\S/g, l => l.toUpperCase()),
           sellingPrice: item.sellingPrice / 100,
-          listPrice: item.sellingPrice / 100,
+          listPrice: item.listPrice / 100,
         }));
 
         setProducts(data);
@@ -77,7 +77,7 @@ export const Cart = () => {
   
     return (
       <Container>
-      <h1>Meu Carrinho</h1>
+      <h1>Meu carrinho</h1>
       <hr />
       <div>
         {products.map(item => (
