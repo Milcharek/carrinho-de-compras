@@ -1,14 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { MdAddCircleOutline, MdRemoveCircleOutline } from 'react-icons/md';
-import api from '../../services/api';
 import { toast } from 'react-toastify';
+
+import api from '../../services/api';
 import { formatPrice } from '../../util/format';
-import { Container, Area, Product, ProductInfo, Image, Total, FreteGratis, SubmitButton } from './styles';
+
+import { 
+  Container, 
+  Area, 
+  Product, 
+  ProductInfo, 
+  Image, 
+  Total, 
+  FreeShipping, 
+  SubmitButton 
+} from './styles';
 
 export const Cart = () => {
     const [products, setProducts] = useState([]);
     const [total, setTotal] = useState(0);
-    const [freteGratis, setFreteGratis] = useState(false);
+    const [freeShipping, setFreeShipping] = useState(false);
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -29,8 +40,8 @@ export const Cart = () => {
 
     useEffect(() => {
       if (total >= 10) {
-        setFreteGratis(true)
-      } else (setFreteGratis(false));
+        setFreeShipping(true)
+      } else (setFreeShipping(false));
       if (items.length === 0) {
         setTotal(0);
       }
@@ -53,7 +64,7 @@ export const Cart = () => {
 
     const handleSubmit = () => {
       toast.success('Compra efetuada com sucesso!', {
-        position: "top-right",
+        position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -92,10 +103,15 @@ export const Cart = () => {
       <hr />
       <Total> 
         <h2>Total:</h2>
-        <h2>{formatPrice(total)}</h2>
+        <h2>
+          {formatPrice(total)} 
+          {!freeShipping && 
+            <p>Faltam <span>{formatPrice(10 - total)}</span> para Frete Grátis!</p>
+          }
+        </h2>
       </Total>
-        {freteGratis && 
-          <FreteGratis>Parabéns, sua compra tem frete grátis !</FreteGratis>
+        {freeShipping && 
+          <FreeShipping>Parabéns, sua compra tem frete grátis !</FreeShipping>
         }
       <hr />
       <SubmitButton>
