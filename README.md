@@ -10,12 +10,12 @@ Na pasta do projeto, abrir o terminal e rodar o seguinte comando:
 Em outra instância do terminal:
 `yarn start`
 
-Aguardar o navegador abrir no http://localhost:3000/
+Aguardar o navegador abrir no [Localhost](http://localhost:3000/)
 
 ## Tecnologias utilizadas
-- React
-- React Hooks
-- Toastify
-- React Icons
-- Styled Components
-- Axios
+- [React](https://pt-br.reactjs.org/)
+- [Json Server](https://github.com/typicode/json-server)
+- [Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Styled Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
